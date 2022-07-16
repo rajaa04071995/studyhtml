@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="cssstyles/style.css">
+        <title>HTML API</title>
+    </head>
+    <body>
+        <header style="margin-top:20px ;">
+            <nav style="text-align: center;">
+                <a href="home.html" class="nav">HOME</a>
+                <a href="tablelist.html" class="nav">TABLE & LIST</a>
+                <a href="form.html" class="nav">FORM</a>
+                <a href="gm.html" class="nav">GRAPICS & MULTIMEDIA</a>
+                <a href="api.html" class="nav">API</a>
+            </nav>
+        </header>
+        <br><br><br>
+        <div style="margin-left: 50px;">
+            <button onclick="getLocation()" 
+            style="border:2px dotted green ; background-color: whitesmoke; color: green;
+             border-radius: 5px; font-size: 28px;">
+             CLick To Get Current Location <i class="material-icons" style="padding: 5px;">my_location</i>
+            </button>
+            <p id="demo" name="demo"></p>
+        </div>
+        <footer>
+            <div style="text-align: center;">&copy By the author &#128518</div>
+        </footer>
+    </body>
+    <script>
+        var x = document.getElementById("demo");
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else{
+                x.innerHTML="Not supported";
+            }
+        }
+        function showPosition(position){
+            x.innerHTML="Longitude :" + position.coords.latitude + "Longitude :" + position.coords.longitude;
+        }
+    </script>
+</html>

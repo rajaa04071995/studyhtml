@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="cssstyles/style.css">
+        <title>Home</title>
+    </head>
+    <body>
+        <header style="margin-top:20px ;">
+            <nav style="text-align: center;">
+                <a href="home.html" class="nav">HOME</a>
+                <a href="tablelist.html" class="nav">TABLE & LIST</a>
+                <a href="form.html" class="nav">FORM</a>
+                <a href="gm.html" class="nav">GRAPICS & MULTIMEDIA</a>
+                <a href="api.html" class="nav">API</a>
+            </nav>
+        </header>
+        <div>
+            <h1 style="text-align: center;">HOME PAGE</h1>
+        </div>
+        <div style="background-image:url('media/bg.jpg'); color: white;">
+            <h3>PARAGRAPH TAG :</h3>
+            <p>&nbsp &nbsp &nbsp Paragraphs can contain many different kinds of information. 
+                A paragraph could contain a <span><b>hello this is span tag</b></span> of brief examples or a single long illustration of a general point.
+                 It might describe a place, character, or process; narrate a series of events;
+                  compare or contrast two or more things; classify items into categories;
+                   or describe causes and effects.
+                    Regardless of the kind of information they contain,
+                     all paragraphs share certain characteristics. 
+                One of the most important of these is a topic sentence.</p>
+                <br>
+        </div>
+        <br>
+        <br>
+        <div><span style="text-decoration: underline;">Picture tag concept</span> : images change according the size of the device</div>
+        <br>
+        <div>
+            <picture>
+                <source media="(min-width:650px)" srcset="media/img1.jpg" width="100%" height="500px">
+                <source media="(min-width:450px)" srcset="media/img2.jpg" width="100%" height="500px">
+                <img src="media/img3.jpg" width="100%" height="500px">
+            </picture>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div><span style="text-decoration: underline;">Image mapping</span> : Click on the book to open the image</div>
+        <br>
+        <div>
+            <img src="media/img2.jpg" alt="image" usemap="#mapping" width="100%" height="500px">
+            <map name="mapping">
+                <area shape="rect" coords="90,90,1200,450" alt="book" href="media/img2.jpg">
+            </map>
+        </div>
+        <br>
+        <br>
+        <footer>
+            <div style="text-align: center;">&copy By the author &#128518</div>
+        </footer>
+    </body>
+</html>

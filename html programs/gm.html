@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="cssstyles/style.css">
+        <title>Grapics And Multimedia</title>
+    </head>
+    <body>
+        <header style="margin-top:20px ;">
+            <nav style="text-align: center;">
+                <a href="home.html" class="nav">HOME</a>
+                <a href="tablelist.html" class="nav">TABLE & LIST</a>
+                <a href="form.html" class="nav">FORM</a>
+                <a href="gm.html" class="nav">GRAPICS & MULTIMEDIA</a>
+                <a href="api.html" class="nav">API</a>
+            </nav>
+        </header>
+        <div>
+            <h1 style="text-align: center;">GRAPICS AND MULTIMEDIA CONCEPT</h1>
+        </div>
+        <div>
+            <h3>Canvas with JS :</h3>
+        </div>
+        <div>
+            <canvas id="mycanvas" width="500px" height="200px" style="border:3px inset grey ; background-color: aquamarine;"></canvas>
+        </div>
+        <br>
+        <br><br>
+        <div>
+            <h3>SVG :</h3>
+        </div>
+        <div>
+            <svg width="500" height="200" style="border: 2px solid yellow;">
+            <circle cx="250" cy="100" r="80" stroke="green" stroke-width="4" fill="yellow"/>
+            </svg>
+        </div><br><br><br>
+        <div>
+            <h3>Multimedia in HTML :</h3>
+        </div>
+        <div>
+            <video width="500" height="300" controls autoplay muted>
+                <source src="media/sample.mp4" type="video/mp4">
+            </video>
+        </div><br><br><br>
+        <div>
+            <h3>Embed Tag: can embed image,html file,video ,etc.,</h3>
+            <embed src="media/sample.mp4" width="100%">
+        </div><br><br><br>
+        <div>
+            <h3>iframe to play youtube video :</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K4TOrB7at0Y" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        </div>
+        <footer>
+            <div style="text-align: center;">&copy By the author &#128518</div>
+        </footer>
+    </body>
+    <script>
+        var c = document.getElementById("mycanvas");
+        var drawline = c.getContext("2d");
+        var text= c.getContext("2d");
+        drawline.moveTo(100,100);
+        drawline.lineTo(400,100);
+        drawline.stroke();
+        text.font="30px arial";
+        text.strokeText("Hai",20,50);
+    </script>
+</html>

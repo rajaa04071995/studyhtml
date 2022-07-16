@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="cssstyles/style.css">
+        <title>Table</title>
+        <style>
+            table,th,td{
+                
+                padding: 10px;
+                text-align: center;
+                border-spacing: 10px;
+                
+            }
+            table{
+                border: 5px outset aqua;
+                border-radius: 10px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            tr:nth-child(even){
+                background-color: aquamarine;
+            }
+            tr:hover{
+                background-color: aqua;
+            }
+            .list{
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="margin-top:20px ;">
+            <nav style="text-align: center;">
+                <a href="home.html" class="nav">HOME</a>
+                <a href="tablelist.html" class="nav">TABLE & LIST</a>
+                <a href="form.html" class="nav">FORM</a>
+                <a href="gm.html" class="nav">GRAPICS & MULTIMEDIA</a>
+                <a href="api.html" class="nav">API</a>
+            </nav>
+        </header>
+        <div>
+            <h1 style="text-align: center;">TABLE AND LILST CONCEPT</h1>
+        </div>
+        <div>
+            <h3>TABLE :</h3>
+        </div>
+        <div>
+            <table>
+                <caption style="text-decoration:underline ;margin-bottom: 10px;">Student Mark List</caption>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Roll.No</th>
+                    <th colspan="2">Marks</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rajaa</td>
+                    <td>500</td>
+                    <td>98</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Faize</td>
+                    <td>505</td>
+                    <td>90</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ravi</td>
+                    <td>512</td>
+                    <td>60</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Sarvan</td>
+                    <td>502</td>
+                    <td>99</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>kishore</td>
+                    <td>505</td>
+                    <td>30</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Ramu</td>
+                    <td>506</td>
+                    <td>95</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Thow</td>
+                    <td>503</td>
+                    <td>100</td>
+                    <td>98</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>LIST & Class Concept :</h3>
+        </div>
+        <div>
+            <div class="list">Ordered List</div>
+            <ol type="1">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Black Coffee</li>
+                <li>Cold Coffee</li>
+            </ol>
+            <div class="list">UnOrdered List</div>
+            <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Black Coffee</li>
+                <li>Cold Coffee</li>
+            </ul>
+            <div class="list">Discriptive List</div>
+            <dl>
+                <dt>Hot Drink</dt>
+                <dd>Tea</dd>
+                <dd>Black Coffee</dd>
+                <dt>Cold Drink</dt>
+                <dd>Cold Coffee</dd>
+            </dl>
+        </div>
+        <footer>
+            <div style="text-align: center;">&copy By the author &#128518</div>
+        </footer>
+    </body>
+</html>

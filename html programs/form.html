@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Form</title>
+        <link rel="stylesheet" href="cssstyles/style.css">
+        <style>
+            input,textarea,button,select{
+                border-radius: 5px;
+                border-color: greenyellow;
+            }
+            input:focus{
+                border: 2px solid red;
+                outline-style: none;
+            }
+            textarea:focus{
+                border: 2px solid red;
+                outline-style: none;
+            }
+            select:focus{
+                border: 2px solid red;
+                outline-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="margin-top:20px ;">
+            <nav style="text-align: center;">
+                <a href="home.html" class="nav">HOME</a>
+                <a href="tablelist.html" class="nav">TABLE & LIST</a>
+                <a href="form.html" class="nav">FORM</a>
+                <a href="gm.html" class="nav">GRAPICS & MULTIMEDIA</a>
+                <a href="api.html" class="nav">API</a>
+            </nav>
+        </header>
+        <div>
+            <h1 style="text-align: center;">FORM CONCEPT</h1>
+        </div>
+        <div>
+            <form action="demo1.php" method="get">
+                <fieldset style="border-radius:10px ; border:3px outset red;">
+                    <legend>Personal Details</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="fname">Name :</label>
+                            </td>
+                            <td>
+                                <input type="text" name="fname" style="border-radius:5px ;" id="fname" placeholder="Enter Name" autofocus pattern="^[a-zA-Z]+$" required><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="age">Age :</label>
+                            </td>
+                            <td>
+                                <input type="number" name="age" id="age" placeholder="Enter Age" required><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dob">Date Of Birth :</label>
+                            </td>
+                            <td>
+                                <input type="date" name="dob" id="dob" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="phone">Mobile Number :</label>
+                            </td>
+                            <td>
+                                <input type="tel" name="phone" id="phone" placeholder="Enter Mobile Number" minlength="10" maxlength="10" required pattern="^[0-9]+$"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="mail">Email Id:</label>
+                            </td>
+                            <td>
+                                <input type="email" name="mail" id="mail" placeholder="Enter Mail Id" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="gender">Gender :</label>
+                            </td>
+                            <td>
+                                <select id="gender" name="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="trans">Transgender</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="address">Address :</label>
+                            </td>
+                            <td>
+                                <textarea name="address" id="address" placeholder="Enter Address" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="education">Qualification :</label>
+                            </td>
+                            <td>
+                                <input list="edu" id="education" name="education" placeholder="Enter Qualification" required>
+                                <datalist id="edu">
+                                    <option value="B.E">
+                                    <option value="B.A">
+                                    <option value="B.COM">
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Prefered Language :</label>
+                            </td>
+                            <td id="lang">
+                                <input type="radio" id="eng" name="lang" value="English"><label for="eng">English</label>
+                                <input type="radio" id="tam" name="lang" value="Tamil"> <label for="tam">Tamil</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="rating">Rate Yourself in HTML:</label>
+                            </td>
+                            <td>
+                                <input type="range" id="rating" name="rating" min="0" max="10" value="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="file">Upload Resume :</label>
+                            </td>
+                            <td>
+                                <input type="file" id="file" name="file" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="submit by get" style="color: white; background-color:green; padding:2px;">
+                            </td>
+                            <td>
+                                <input type="submit" formaction="demo.php" formmethod="post" formtarget="_blank" value="submit by post"  style="color: white; background-color:green; padding:2px;">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+            <button type="button" onclick="triggr()" style="color: white; background-color:blueviolet; padding:2px;">Click To Get Alert From Javascript</button>
+            
+            <script>
+                function triggr(){
+                    var name1 = document.getElementById("fname").value;
+                    var age1 = document.getElementById("age").value;
+                    var dob1 = document.getElementById("dob").value;
+                    var phone1 = document.getElementById("phone").value;
+                    var mail1 = document.getElementById("mail").value;
+                    var gender1 = document.getElementById("gender").value;
+                    var address1 = document.getElementById("address").value;
+                    var education1 = document.getElementById("education").value;
+                    //var lang1 = document.getElementById("lang").value;
+                    var lang1 = document.querySelector('input[name="lang"]:checked').value;
+                    var rating1 = document.getElementById("rating").value;
+                    var file1 = document.getElementById("file").value;
+                    alert('Name:'+name1+','+'Age:'+age1+','+'DOB:'+dob1+','+'Mobile:'
+                    +phone1+','+'Mail:'+mail1+','+'Gender:'+gender1+','+'Adderss:'+address1+','+'Education:'
+                    +education1+','+'Rating:'+rating1+','+'File:'+file1+','+'Lang:'+lang1);
+                }
+                
+            </script>    
+        </div>
+        <footer>
+            <div style="text-align: center;">&copy By the author &#128518</div>
+        </footer>
+    </body>
+</html>
